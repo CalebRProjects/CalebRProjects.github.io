@@ -2,10 +2,14 @@
 title: "Resume"
 ---
 
-[Download Resume](CalebRamsey_Resume_May2026.pdf)
+## Resume
+
+[Download Resume](assets/Caleb_Ramsey_Resume.pdf)
 
 ## Technical Skills
 
 **Languages & Tools:** R, Python, SQL, Tableau, Git/GitHub, Excel  
+
 **R Ecosystem:** tidyverse, ggplot2, Shiny, Quarto, R Markdown, plotly  
+
 **Analytics:** Statistical modeling, dashboard development, API retrieval, web scraping, reproducible workflows, data visualization

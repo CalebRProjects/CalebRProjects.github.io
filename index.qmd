@@ -2,13 +2,62 @@
 title: "Caleb Ramsey"
 ---
 
-## Basketball analytics, data visualization, and applied sports technology
+::: {.hero}
+<div class="tagline">Analytics · data visualization · applied sports technology</div>
 
-I’m a Virginia Tech graduate with degrees in Statistics and Sports Media & Analytics. I build analytics projects, visual reports, and reproducible workflows in R, with work spanning team-facing dashboards, scouting tools, NBA/WNBA analysis, and shot quality modeling.
+# Caleb Ramsey
+
+<div class="subtitle">
+I’m a Virginia Tech Statistics and Sports Media & Analytics graduate building data tools, visual reports, and reproducible workflows in R. My strongest work sits at the intersection of basketball, analytics, and communication, including team-facing dashboards, scouting card systems, NBA/WNBA analysis, and prototype shot quality modeling.
+</div>
+:::
 
 ## Featured Work
 
-- **Practice Hustle Dashboard** — R Shiny + Quarto dashboard for tracking practice performance trends and evaluating practice-to-game relationships.
-- **Scouting Card & Badge System** — Automated player cards using Synergy playtype data, percentile grading logic, and custom R visualization workflows.
-- **TipOffBall Analytics** — NBA/WNBA analysis workflows, visual reports, and public-facing basketball writing.
-- **Shot Quality Pipeline** — Prototype pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value.
+::: {.project-grid}
+
+::: {.project-card}
+### Practice Hustle Dashboard
+
+Built a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, player pages, and team trends.
+
+[View project](projects.qmd#practice-hustle-dashboard)
+:::
+
+::: {.project-card}
+### Scouting Card & Badge System
+
+Designed custom basketball badges in Photoshop and built an R pipeline that converts Synergy playtype data into automated player scouting cards.
+
+[View project](projects.qmd#scouting-card--badge-system)
+:::
+
+::: {.project-card}
+### TipOffBall NBA/WNBA Analysis
+
+Produced 20+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
+
+[View project](projects.qmd#tipoffball-nbawnba-analysis)
+:::
+
+::: {.project-card}
+### Shot Quality Pipeline
+
+Built a prototype pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value and offensive process.
+
+[View project](projects.qmd#shot-quality-pipeline)
+:::
+
+:::
+
+## Additional Analytics Work
+
+Beyond sports, I’ve worked on projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and applied statistical reporting. These projects use similar core skills: cleaning data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
+
+## About
+
+My background sits between statistics, sports media, and communication, which has shaped how I think about analytics. I care about the model or method, but I also care about whether the result can be understood, trusted, and used.
+
+A lot of strong analysis gets ignored because it is trapped in a spreadsheet, buried in a notebook, or presented in a way that does not match the audience. I’m interested in closing that gap by turning messy data into something clear, visual, and worth engaging with.
+
+Most of my work is built in R using Quarto, Shiny, R Markdown, ggplot2, tidyverse, and API-based data workflows.
