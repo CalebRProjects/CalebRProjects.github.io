@@ -1,1 +1,25 @@
+project:
+  type: website
+  output-dir: docs
 
+website:
+  title: "Caleb Ramsey"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: resume.qmd
+        text: Resume
+    right:
+      - text: GitHub
+        href: https://github.com/CalebRProjects
+      - text: LinkedIn
+        href: https://www.linkedin.com/in/caleb-ramsey-analytics
+
+format:
+  html:
+    theme: cosmo
+    toc: false
+    page-layout: full
