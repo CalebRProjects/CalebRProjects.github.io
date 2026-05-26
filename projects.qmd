@@ -76,6 +76,7 @@ Built an R simulation project modeling five-year insurance solvency risk under h
 The simulation showed how a company can appear profitable on average while still facing meaningful insolvency risk from rare, high-severity claims. Under the profit-taking policy, estimated bankruptcy risk increased from 16.3% to 34.3%, showing how removing surplus capital can leave the company more exposed to extreme losses.
 
 **Highlights**
+
 - Generated Pareto-distributed claim sizes using the inverse CDF method
 - Simulated 1,000 five-year company asset trajectories
 - Estimated bankruptcy probability and expected final assets under multiple policy assumptions
