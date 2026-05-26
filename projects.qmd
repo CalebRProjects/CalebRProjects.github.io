@@ -65,6 +65,8 @@ Produced 30+ NBA analysis projects turning basketball data into public-facing st
 - Produced written reports and visual analysis that generated 250,000+ X impressions and 100,000+ Instagram engagements
 - Collaborated with TipOffBall to turn statistical findings into social-first basketball content
 
+[View NBA projects repository](https://github.com/CalebRProjects/2025-26NBAProjects)
+
 ---
 
 ## Insurance Risk Monte Carlo Simulation
