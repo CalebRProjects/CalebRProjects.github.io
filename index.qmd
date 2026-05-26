@@ -35,24 +35,24 @@ Designed custom basketball badges in Photoshop and built an R pipeline that conv
 ::: {.project-card}
 ### TipOffBall NBA/WNBA Analysis
 
-Produced 20+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
+Produced 30+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
 
 [View project](projects.qmd#tipoffball-nbawnba-analysis)
 :::
 
 ::: {.project-card}
-### Shot Quality Pipeline
+### Insurance Risk Monte Carlo Simulation
 
-Built a prototype pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value and offensive process.
+Built an R simulation framework to model reserve solvency under heavy-tailed claim distributions, estimate risk outcomes, and communicate uncertainty through statistical summaries and visuals.
 
-[View project](projects.qmd#shot-quality-pipeline)
+[View project](projects.qmd#insurance-risk-monte-carlo-simulation)
 :::
 
 :::
 
 ## Additional Analytics Work
 
-Beyond sports, I’ve worked on projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and applied statistical reporting. These projects use similar core skills: cleaning data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
+Beyond my main basketball projects, I’ve worked on applied analytics projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and statistical reporting. These projects use the same core process: cleaning messy data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
 
 ## About
 

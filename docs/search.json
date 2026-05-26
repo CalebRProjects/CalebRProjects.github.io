@@ -32,14 +32,14 @@
     "href": "index.html#featured-work",
     "title": "Caleb Ramsey",
     "section": "Featured Work",
-    "text": "Featured Work\n\n\nPractice Hustle Dashboard\nBuilt a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, player pages, and team trends.\nView project\n\n\nScouting Card & Badge System\nDesigned custom basketball badges in Photoshop and built an R pipeline that converts Synergy playtype data into automated player scouting cards.\nView project\n\n\nTipOffBall NBA/WNBA Analysis\nProduced 20+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.\nView project\n\n\nShot Quality Pipeline\nBuilt a prototype pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value and offensive process.\nView project"
+    "text": "Featured Work\n\n\nPractice Hustle Dashboard\nBuilt a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, player pages, and team trends.\nView project\n\n\nScouting Card & Badge System\nDesigned custom basketball badges in Photoshop and built an R pipeline that converts Synergy playtype data into automated player scouting cards.\nView project\n\n\nTipOffBall NBA/WNBA Analysis\nProduced 30+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.\nView project\n\n\nInsurance Risk Monte Carlo Simulation\nBuilt an R simulation framework to model reserve solvency under heavy-tailed claim distributions, estimate risk outcomes, and communicate uncertainty through statistical summaries and visuals.\nView project"
   },
   {
     "objectID": "index.html#additional-analytics-work",
     "href": "index.html#additional-analytics-work",
     "title": "Caleb Ramsey",
     "section": "Additional Analytics Work",
-    "text": "Additional Analytics Work\nBeyond sports, I’ve worked on projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and applied statistical reporting. These projects use similar core skills: cleaning data, building reproducible workflows, modeling uncertainty, and communicating results clearly."
+    "text": "Additional Analytics Work\nBeyond my main basketball projects, I’ve worked on applied analytics projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and statistical reporting. These projects use the same core process: cleaning messy data, building reproducible workflows, modeling uncertainty, and communicating results clearly."
   },
   {
     "objectID": "index.html#about",
@@ -77,17 +77,24 @@
     "text": "TipOffBall NBA/WNBA Analysis\nTools: R, NBA.com, Synergy, Cleaning the Glass, StatMuse, DataBallr, ggplot2, R Markdown\nProduced 30+ NBA analysis projects turning basketball data into public-facing statistical stories. I gather data from sources like NBA.com, Cleaning the Glass, StatMuse, Synergy, DataBallr, and other basketball data tools, then use R to clean, organize, analyze, and visualize the findings behind written reports and social media threads.\n\nExample social graphic from a TipOffBall analysis. My role focused on data collection, R workflows, statistical framing, written findings, and the underlying chart/analysis.\n\nExample cover graphic from the same project, showing how the analysis was packaged into a social-first basketball story.\nHighlights\n\nBuilt R workflows for NBA player and team analysis using public and proprietary basketball data sources\nCreated data-backed stories on team performance, player development, playoff adjustments, trade fits, and player-specific trends\nProduced written reports and visual analysis that generated 250,000+ X impressions and 100,000+ Instagram engagements\nCollaborated with TipOffBall to turn statistical findings into social-first basketball content"
   },
   {
-    "objectID": "projects.html#shot-quality-pipeline",
-    "href": "projects.html#shot-quality-pipeline",
+    "objectID": "projects.html#insurance-risk-monte-carlo-simulation",
+    "href": "projects.html#insurance-risk-monte-carlo-simulation",
     "title": "Projects",
-    "section": "Shot Quality Pipeline",
-    "text": "Shot Quality Pipeline\nTools: R, NBA Stats API, play-by-play data, shot chart data\nBuilt a prototype shot quality pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value and offensive process metrics.\nHighlights\n\nPulled and cleaned player-level shot events from public NBA data sources\nDeveloped a framework for evaluating shot quality beyond makes and misses\nDesigned the project as a proof of concept for future tracking-data-style analysis"
+    "section": "Insurance Risk Monte Carlo Simulation",
+    "text": "Insurance Risk Monte Carlo Simulation\nTools: R, tidyverse, Monte Carlo simulation, Pareto distributions, ggplot2\nBuilt an R simulation project modeling five-year insurance solvency risk under heavy-tailed Pareto claim distributions. The analysis estimated bankruptcy probability, expected final assets, and compared two company policies: retaining surplus capital versus paying out excess assets at the end of each year.\nThe simulation showed how a company can appear profitable on average while still facing meaningful insolvency risk from rare, high-severity claims. Under the profit-taking policy, estimated bankruptcy risk increased from 16.3% to 34.3%, showing how removing surplus capital can leave the company more exposed to extreme losses.\nHighlights - Generated Pareto-distributed claim sizes using the inverse CDF method - Simulated 1,000 five-year company asset trajectories - Estimated bankruptcy probability and expected final assets under multiple policy assumptions - Visualized claim distributions, asset trajectories, and final asset outcomes"
+  },
+  {
+    "objectID": "projects.html#view-full-project-pdf",
+    "href": "projects.html#view-full-project-pdf",
+    "title": "Projects",
+    "section": "View full project PDF",
+    "text": "View full project PDF"
   },
   {
     "objectID": "projects.html#additional-analytics-projects",
     "href": "projects.html#additional-analytics-projects",
     "title": "Projects",
     "section": "Additional Analytics Projects",
-    "text": "Additional Analytics Projects\n\nInsurance Risk Monte Carlo Simulation\nBuilt a Monte Carlo simulation in R to model reserve solvency under heavy-tailed claim distributions.\n\n\nEmployee Attrition Analysis\nAnalyzed employee attrition patterns using statistical modeling and exploratory data visualization.\n\n\nSurvey Analysis Project\nCleaned and analyzed survey response data to identify patterns, summarize findings, and communicate results."
+    "text": "Additional Analytics Projects\n\nShot Quality Pipeline\nEarly-stage prototype exploring how NBA Stats API play-by-play and shot chart data can be used to estimate contextual shot value beyond makes and misses. The long-term goal is to build a small dashboard for pulling player-level shot quality over a full season or selected recent-game window.\n\n\nEmployee Attrition Analysis\nAnalyzed employee attrition patterns using statistical modeling and exploratory data visualization.\n\n\nSurvey Analysis Project\nCleaned and analyzed survey response data to identify patterns, summarize findings, and communicate results."
   }
 ]

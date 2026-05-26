@@ -197,23 +197,21 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <hr>
 </section>
-<section id="shot-quality-pipeline" class="level2">
-<h2 class="anchored" data-anchor-id="shot-quality-pipeline">Shot Quality Pipeline</h2>
-<p><strong>Tools:</strong> R, NBA Stats API, play-by-play data, shot chart data</p>
-<p>Built a prototype shot quality pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value and offensive process metrics.</p>
-<p><strong>Highlights</strong></p>
-<ul>
-<li>Pulled and cleaned player-level shot events from public NBA data sources</li>
-<li>Developed a framework for evaluating shot quality beyond makes and misses</li>
-<li>Designed the project as a proof of concept for future tracking-data-style analysis</li>
-</ul>
-<hr>
+<section id="insurance-risk-monte-carlo-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="insurance-risk-monte-carlo-simulation">Insurance Risk Monte Carlo Simulation</h2>
+<p><strong>Tools:</strong> R, tidyverse, Monte Carlo simulation, Pareto distributions, ggplot2</p>
+<p>Built an R simulation project modeling five-year insurance solvency risk under heavy-tailed Pareto claim distributions. The analysis estimated bankruptcy probability, expected final assets, and compared two company policies: retaining surplus capital versus paying out excess assets at the end of each year.</p>
+<p>The simulation showed how a company can appear profitable on average while still facing meaningful insolvency risk from rare, high-severity claims. Under the profit-taking policy, estimated bankruptcy risk increased from 16.3% to 34.3%, showing how removing surplus capital can leave the company more exposed to extreme losses.</p>
+<p><strong>Highlights</strong> - Generated Pareto-distributed claim sizes using the inverse CDF method - Simulated 1,000 five-year company asset trajectories - Estimated bankruptcy probability and expected final assets under multiple policy assumptions - Visualized claim distributions, asset trajectories, and final asset outcomes</p>
+</section>
+<section id="view-full-project-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="view-full-project-pdf"><a href="assets/insurance-monte-carlo-simulation.pdf">View full project PDF</a></h2>
 </section>
 <section id="additional-analytics-projects" class="level2">
 <h2 class="anchored" data-anchor-id="additional-analytics-projects">Additional Analytics Projects</h2>
-<section id="insurance-risk-monte-carlo-simulation" class="level3">
-<h3 class="anchored" data-anchor-id="insurance-risk-monte-carlo-simulation">Insurance Risk Monte Carlo Simulation</h3>
-<p>Built a Monte Carlo simulation in R to model reserve solvency under heavy-tailed claim distributions.</p>
+<section id="shot-quality-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="shot-quality-pipeline">Shot Quality Pipeline</h3>
+<p>Early-stage prototype exploring how NBA Stats API play-by-play and shot chart data can be used to estimate contextual shot value beyond makes and misses. The long-term goal is to build a small dashboard for pulling player-level shot quality over a full season or selected recent-game window.</p>
 </section>
 <section id="employee-attrition-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="employee-attrition-analysis">Employee Attrition Analysis</h3>

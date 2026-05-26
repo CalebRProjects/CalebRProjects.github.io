@@ -67,24 +67,28 @@ Produced 30+ NBA analysis projects turning basketball data into public-facing st
 
 ---
 
-## Shot Quality Pipeline
+## Insurance Risk Monte Carlo Simulation
 
-**Tools:** R, NBA Stats API, play-by-play data, shot chart data
+**Tools:** R, tidyverse, Monte Carlo simulation, Pareto distributions, ggplot2
 
-Built a prototype shot quality pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value and offensive process metrics.
+Built an R simulation project modeling five-year insurance solvency risk under heavy-tailed Pareto claim distributions. The analysis estimated bankruptcy probability, expected final assets, and compared two company policies: retaining surplus capital versus paying out excess assets at the end of each year.
+
+The simulation showed how a company can appear profitable on average while still facing meaningful insolvency risk from rare, high-severity claims. Under the profit-taking policy, estimated bankruptcy risk increased from 16.3% to 34.3%, showing how removing surplus capital can leave the company more exposed to extreme losses.
 
 **Highlights**
+- Generated Pareto-distributed claim sizes using the inverse CDF method
+- Simulated 1,000 five-year company asset trajectories
+- Estimated bankruptcy probability and expected final assets under multiple policy assumptions
+- Visualized claim distributions, asset trajectories, and final asset outcomes
 
-- Pulled and cleaned player-level shot events from public NBA data sources
-- Developed a framework for evaluating shot quality beyond makes and misses
-- Designed the project as a proof of concept for future tracking-data-style analysis
-
+[View full project PDF](assets/insurance-monte-carlo-simulation.pdf)
 ---
 
 ## Additional Analytics Projects
 
-### Insurance Risk Monte Carlo Simulation
-Built a Monte Carlo simulation in R to model reserve solvency under heavy-tailed claim distributions.
+### Shot Quality Pipeline
+
+Early-stage prototype exploring how NBA Stats API play-by-play and shot chart data can be used to estimate contextual shot value beyond makes and misses. The long-term goal is to build a small dashboard for pulling player-level shot quality over a full season or selected recent-game window.
 
 ### Employee Attrition Analysis
 Analyzed employee attrition patterns using statistical modeling and exploratory data visualization.
