@@ -1,1 +1,14 @@
+---
+title: "Caleb Ramsey"
+---
 
+## Basketball analytics, data visualization, and applied sports technology
+
+I’m a Virginia Tech graduate with degrees in Statistics and Sports Media & Analytics. I build analytics projects, visual reports, and reproducible workflows in R, with work spanning team-facing dashboards, scouting tools, NBA/WNBA analysis, and shot quality modeling.
+
+## Featured Work
+
+- **Practice Hustle Dashboard** — R Shiny + Quarto dashboard for tracking practice performance trends and evaluating practice-to-game relationships.
+- **Scouting Card & Badge System** — Automated player cards using Synergy playtype data, percentile grading logic, and custom R visualization workflows.
+- **TipOffBall Analytics** — NBA/WNBA analysis workflows, visual reports, and public-facing basketball writing.
+- **Shot Quality Pipeline** — Prototype pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value.

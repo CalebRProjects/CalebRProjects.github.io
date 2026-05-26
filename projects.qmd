@@ -1,1 +1,21 @@
+---
+title: "Projects"
+---
 
+## Practice Hustle Dashboard
+
+Built an R Shiny + Quarto dashboard for Virginia Tech Women’s Basketball to track practice hustle metrics, automate reports, and visualize player performance trends.
+
+Public materials use anonymized or altered data to preserve team confidentiality.
+
+## Scouting Card & Badge System
+
+Automated basketball scouting cards using Synergy playtype data, percentile grading logic, and custom R visualization workflows.
+
+## TipOffBall NBA/WNBA Analysis
+
+Build NBA and WNBA analytics workflows in R using Synergy and NBA Stats API data for player evaluation, playoff analysis, and basketball data visualization.
+
+## Shot Quality Pipeline
+
+Built a prototype shot quality pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value.
