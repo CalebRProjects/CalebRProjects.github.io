@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Download Resume"
+  },
+  {
+    "objectID": "resume.html#technical-skills",
+    "href": "resume.html#technical-skills",
+    "title": "Resume",
+    "section": "Technical Skills",
+    "text": "Technical Skills\nLanguages & Tools: R, Python, SQL, Tableau, Git/GitHub, Excel\nR Ecosystem: tidyverse, ggplot2, Shiny, Quarto, R Markdown, plotly\nAnalytics: Statistical modeling, dashboard development, API retrieval, web scraping, reproducible workflows, data visualization"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Caleb Ramsey",
+    "section": "",
+    "text": "I’m a Virginia Tech graduate with degrees in Statistics and Sports Media & Analytics. I build analytics projects, visual reports, and reproducible workflows in R, with work spanning team-facing dashboards, scouting tools, NBA/WNBA analysis, and shot quality modeling."
+  },
+  {
+    "objectID": "index.html#basketball-analytics-data-visualization-and-applied-sports-technology",
+    "href": "index.html#basketball-analytics-data-visualization-and-applied-sports-technology",
+    "title": "Caleb Ramsey",
+    "section": "",
+    "text": "I’m a Virginia Tech graduate with degrees in Statistics and Sports Media & Analytics. I build analytics projects, visual reports, and reproducible workflows in R, with work spanning team-facing dashboards, scouting tools, NBA/WNBA analysis, and shot quality modeling."
+  },
+  {
+    "objectID": "index.html#featured-work",
+    "href": "index.html#featured-work",
+    "title": "Caleb Ramsey",
+    "section": "Featured Work",
+    "text": "Featured Work\n\nPractice Hustle Dashboard — R Shiny + Quarto dashboard for tracking practice performance trends and evaluating practice-to-game relationships.\nScouting Card & Badge System — Automated player cards using Synergy playtype data, percentile grading logic, and custom R visualization workflows.\nTipOffBall Analytics — NBA/WNBA analysis workflows, visual reports, and public-facing basketball writing.\nShot Quality Pipeline — Prototype pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Built an R Shiny + Quarto dashboard for Virginia Tech Women’s Basketball to track practice hustle metrics, automate reports, and visualize player performance trends.\nPublic materials use anonymized or altered data to preserve team confidentiality."
+  },
+  {
+    "objectID": "projects.html#practice-hustle-dashboard",
+    "href": "projects.html#practice-hustle-dashboard",
+    "title": "Projects",
+    "section": "",
+    "text": "Built an R Shiny + Quarto dashboard for Virginia Tech Women’s Basketball to track practice hustle metrics, automate reports, and visualize player performance trends.\nPublic materials use anonymized or altered data to preserve team confidentiality."
+  },
+  {
+    "objectID": "projects.html#scouting-card-badge-system",
+    "href": "projects.html#scouting-card-badge-system",
+    "title": "Projects",
+    "section": "Scouting Card & Badge System",
+    "text": "Scouting Card & Badge System\nAutomated basketball scouting cards using Synergy playtype data, percentile grading logic, and custom R visualization workflows."
+  },
+  {
+    "objectID": "projects.html#tipoffball-nbawnba-analysis",
+    "href": "projects.html#tipoffball-nbawnba-analysis",
+    "title": "Projects",
+    "section": "TipOffBall NBA/WNBA Analysis",
+    "text": "TipOffBall NBA/WNBA Analysis\nBuild NBA and WNBA analytics workflows in R using Synergy and NBA Stats API data for player evaluation, playoff analysis, and basketball data visualization."
+  },
+  {
+    "objectID": "projects.html#shot-quality-pipeline",
+    "href": "projects.html#shot-quality-pipeline",
+    "title": "Projects",
+    "section": "Shot Quality Pipeline",
+    "text": "Shot Quality Pipeline\nBuilt a prototype shot quality pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value."
+  }
+]
