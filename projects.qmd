@@ -4,18 +4,53 @@ title: "Projects"
 
 ## Practice Hustle Dashboard
 
-Built an R Shiny + Quarto dashboard for Virginia Tech Women’s Basketball to track practice hustle metrics, automate reports, and visualize player performance trends.
+**Tools:** R, Shiny, Quarto, Google Sheets API, ggplot2, statistical modeling
 
-Public materials use anonymized or altered data to preserve team confidentiality.
+Built a team-facing practice performance dashboard for Virginia Tech Women’s Basketball to track hustle metrics, automate reports, and visualize player trends over time.
+
+Public materials use anonymized or altered data to preserve team confidentiality while showing the dashboard structure, workflow, and analytical approach.
+
+**Highlights**
+- Automated practice data ingestion from structured Google Sheets tabs
+- Built caching workflows to reduce API load and support scalable updates
+- Created coach-facing visual summaries of player trends and team-level patterns
+- Evaluated relationships between practice hustle metrics and subsequent game performance
+
+---
 
 ## Scouting Card & Badge System
 
-Automated basketball scouting cards using Synergy playtype data, percentile grading logic, and custom R visualization workflows.
+**Tools:** R, Synergy data, ggplot2, image rendering, percentile grading
+
+Designed an automated scouting card system that converts playtype data into team-themed player evaluation graphics.
+
+**Highlights**
+- Built custom badge logic using playtype efficiency, usage, and percentile-based grading
+- Generated team-colored cards for scouting and player evaluation workflows
+- Combined statistical summaries with visual design to make player tendencies easier to interpret
+
+---
 
 ## TipOffBall NBA/WNBA Analysis
 
-Build NBA and WNBA analytics workflows in R using Synergy and NBA Stats API data for player evaluation, playoff analysis, and basketball data visualization.
+**Tools:** R, NBA Stats API, Synergy, ggplot2, R Markdown, Quarto
+
+Build reproducible NBA and WNBA analysis workflows for player evaluation, playoff analysis, and public-facing basketball storytelling.
+
+**Highlights**
+- Published work generated 200,000+ X impressions and 75,000+ Instagram engagements
+- Created written reports, visual summaries, and statistical analysis for basketball-focused audiences
+- Worked with public and proprietary basketball datasets to explain player/team trends
+
+---
 
 ## Shot Quality Pipeline
 
-Built a prototype shot quality pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value.
+**Tools:** R, NBA Stats API, play-by-play data, shot chart data
+
+Built a prototype shot quality pipeline using NBA Stats API play-by-play and shot chart data to model contextual shot value and offensive process metrics.
+
+**Highlights**
+- Pulled and cleaned player-level shot events from public NBA data sources
+- Developed a framework for evaluating shot quality beyond makes and misses
+- Designed the project as a proof of concept for future tracking-data-style analysis
