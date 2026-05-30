@@ -49,7 +49,7 @@ Built a 2K-style player rating model for NCAA men’s and women’s basketball t
 ::: {.project-card}
 ![](assets/images/tipoff-knicks-chart-example.jpg)
 
-### TipOffBall NBA/WNBA Analysis
+### TipOffBall NBA Analysis
 
 Produced 30+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
 
