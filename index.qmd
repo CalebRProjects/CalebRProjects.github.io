@@ -51,26 +51,18 @@ Built a 2K-style player rating model for NCAA men’s and women’s basketball t
 
 ### TipOffBall NBA Analysis
 
-Produced 30+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
+Produced 30+ public-facing NBA analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
 
-[View project](projects.qmd#tipoffball-nbawnba-analysis)
-:::
-
-::: {.project-card}
-![](assets/images/insurance-monte-carlo-example.png)
-
-### Insurance Risk Monte Carlo Simulation
-
-Built an R simulation framework to model reserve solvency under heavy-tailed claim distributions, estimate risk outcomes, and communicate uncertainty through statistical summaries and visuals.
-
-[View project](projects.qmd#insurance-risk-monte-carlo-simulation)
+[View project](projects.qmd#tipoffball-nba-analysis)
 :::
 
 :::
 
 ## Additional Analytics Work
 
-Beyond my main basketball projects, I’ve worked on applied analytics projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and statistical reporting. These projects use the same core process: cleaning messy data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
+Beyond my main basketball projects, I’ve worked on applied analytics projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and prototype shot quality workflows. These projects use the same core process: cleaning messy data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
+
+[View additional projects](projects.qmd#additional-analytics-projects)
 
 ## About
 
