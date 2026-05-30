@@ -44,7 +44,37 @@ The R pipeline uses Synergy offensive and defensive playtype data to assign play
 
 ---
 
-## TipOffBall NBA/WNBA Analysis
+## Context-Aware NCAA Basketball Player Ratings
+
+**Tools:** R, randomForest, tidyverse, Bart Torvik data, ESPN/wehoop, hoopR, cbbdata, R Markdown
+
+Built a context-aware player rating system for NCAA men’s and women’s basketball that converts box-score production into 2K-style 40–99 ratings, then adjusts those ratings for team strength, schedule difficulty, and conference context.
+
+The men’s pipeline used Bart Torvik player statistics joined with HDI ratings as a modeling baseline. The women’s pipeline used ESPN box-score data through `wehoop`, with season-level aggregation, team/conference mapping, and rating adjustments designed to make outputs more comparable across competitive environments.
+
+Initial ratings were based primarily on player production and efficiency. Final ratings incorporated conference and schedule context, creating a more realistic comparison between high-major stars and high-output players from weaker leagues.
+
+![](assets/images/pipeline-diagram.png)
+
+*Pipeline diagram showing how men’s and women’s player data were cleaned, modeled, adjusted for team and conference context, and converted into final 2K-style ratings.*
+
+![](assets/images/ovr-rating-example.png)
+
+*Example rating comparison showing how the model moved from initial production-based ratings to final conference-adjusted ratings. Initial ratings were driven primarily by player statistical output, while final ratings incorporated team strength, schedule difficulty, and conference context.*
+
+**Highlights**
+
+- Trained a random forest model to estimate player ratings from box-score and efficiency statistics
+- Built men’s and women’s pipelines using different data sources and normalization steps
+- Applied team strength, schedule difficulty, and conference strength adjustments
+- Produced final men’s and women’s 40–99 player rating tables
+- Cleaned a messy class project into a professional GitHub repo with clear folders, scripts, outputs, reports, and documentation
+
+[View project repository](https://github.com/CalebRProjects/NCAA-2K-Style-Ratings)
+
+---
+
+## TipOffBall NBA Analysis
 
 **Tools:** R, NBA.com, Synergy, Cleaning the Glass, StatMuse, DataBallr, ggplot2, R Markdown
 
@@ -69,32 +99,36 @@ Produced 30+ NBA analysis projects turning basketball data into public-facing st
 
 ---
 
-## Insurance Risk Monte Carlo Simulation
-
-**Tools:** R, tidyverse, Monte Carlo simulation, Pareto distributions, ggplot2
-
-Built an R simulation project modeling five-year insurance solvency risk under heavy-tailed Pareto claim distributions. The analysis estimated bankruptcy probability, expected final assets, and compared two company policies: retaining surplus capital versus paying out excess assets at the end of each year.
-
-The simulation showed how a company can appear profitable on average while still facing meaningful insolvency risk from rare, high-severity claims. Under the profit-taking policy, estimated bankruptcy risk increased from 16.3% to 34.3%, showing how removing surplus capital can leave the company more exposed to extreme losses.
-
-**Highlights**
-
-- Generated Pareto-distributed claim sizes using the inverse CDF method
-- Simulated 1,000 five-year company asset trajectories
-- Estimated bankruptcy probability and expected final assets under multiple policy assumptions
-- Visualized claim distributions, asset trajectories, and final asset outcomes
-
-[View full project PDF](assets/insurance-monte-carlo-simulation.pdf)
----
-
 ## Additional Analytics Projects
 
 ### Shot Quality Pipeline
 
-Early-stage prototype exploring how NBA Stats API play-by-play and shot chart data can be used to estimate contextual shot value beyond makes and misses. The long-term goal is to build a small dashboard for pulling player-level shot quality over a full season or selected recent-game window.
+Early-stage proof-of-concept exploring how NBA Stats API play-by-play and shot chart data can be used to estimate contextual shot value beyond makes and misses. The current version is a rough meeting report rather than a finished model, but it shows the basic automation shell of pulling NBA games, extracting shot events, assigning proxy shot quality buckets, summarizing game-to-game trends, and adding a rough possession value layer.
+
+**Tools:** R, NBA Stats API, play-by-play data, shot chart data, tidyverse, R Markdown
+
+[View proof-of-concept PDF](assets/shot-quality-rough-concept-report.pdf)
+
+### Insurance Risk Monte Carlo Simulation
+
+Built an R simulation model to estimate five-year insurance solvency risk under heavy-tailed Pareto claim distributions. Compared reserve-retention and profit-taking policies, showing how bankruptcy risk increased from 16.3% to 34.3% when surplus capital was paid out annually.
+
+**Tools:** R, tidyverse, Monte Carlo simulation, Pareto distributions, ggplot2
+
+[View full project PDF](assets/insurance-monte-carlo-simulation.pdf)
 
 ### Employee Attrition Analysis
-Analyzed employee attrition patterns using statistical modeling and exploratory data visualization.
+
+Analyzed employee attrition patterns across department, overtime status, tenure, income, and job role. The project used exploratory visualization and logistic regression to identify factors associated with higher attrition risk, with overtime standing out as the strongest predictor in the model.
+
+**Tools:** R, tidyverse, ggplot2, logistic regression, R Markdown
+
+[View project PDF](assets/employee-attrition-analysis.pdf)
 
 ### Survey Analysis Project
-Cleaned and analyzed survey response data to identify patterns, summarize findings, and communicate results.
+
+Group survey research project studying how online, in-person, and mixed communication channels relate to undergraduate friendship quality. My group designed the survey, collected the data, and developed the research questions together. My individual contributions focused on the statistical analysis, visualizations, and much of the results/writeup section.
+
+**Tools:** R, QuestionPro, survey analysis, hypothesis testing, data visualization, report writing
+
+[View project PDF](assets/final-survey-report.pdf)
