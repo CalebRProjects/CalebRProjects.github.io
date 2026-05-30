@@ -1,3 +1,820 @@
+ChatGPT
+
+
+
+
+
+
+
+
+
+
+
+conf_map_men.txt
+Document
+
+conf_name_map.txt
+Document
+
+Context-Aware 2K-Style Rating System for NCAA Basketball Final Report.Rmd
+File
+
+DataCheck.rmd
+File
+
+GROUP06_PowerPoint.pptx
+Presentation
+
+GROUP06_WrittenReport.pdf
+PDF
+
+GROUP06_WrittenReport.Rmd
+File
+
+HDI_and_Conf.Rmd
+File
+
+hdi_name_matcher.R
+File
+barttorvik 23
+
+
+barttorvik 24
+
+
+I am cleaning up a messy 2K-style NCAA basketball player rating system repo and want help turning it into a respectable, easy-to-navigate portfolio repo.
+
+I am going to upload the project files in batches of 10. Please do not make final keep/delete/archive decisions until I tell you I am done uploading everything. 
+
+For each batch, I want you to:
+
+* Read and identify each file
+* Keep a running inventory of all uploaded files
+* Briefly summarize what each file appears to do
+* Flag obvious duplicates, drafts, broken files, or unclear files
+* Wait for the next batch before making final repo-structure recommendations
+
+Once I say “all files uploaded,” I want you to:
+
+* Classify every file as Keep, Move, Archive, Delete/Exclude, or Unsure
+* Recommend a clean folder structure
+* Explain what each folder should contain
+* Identify the main source files, final outputs, raw data, processed data, helper scripts, mapping files, reports, and junk
+* Tell me what should be included in the public GitHub repo versus left out
+* Help create a polished README with dashed bullet points in sections like Data Sources, Tools Used, Key Outputs, and File Guide
+* Make the repo understandable to someone who did not work on the class/project
+
+Important context:
+
+* This was originally a class/group project, but I want to create a cleaned portfolio version
+* The project is a context-aware 2K-style NCAA basketball player rating system
+* It includes NCAA men’s/women’s basketball data, conference/team context, HDI-style adjustments, player rankings, possible random forest/modeling work, reports, slides, and helper scripts
+* I want the final repo to look professional, not like a folder dump
+* Do not assume every file belongs in the final repo
+* Be direct about what is messy, redundant, or unnecessary
+* If a file is important but badly named, suggest a cleaner name
+* If a file should stay only for historical context, put it in archive
+* If a file is required for reproducibility, say where it should go
+* If the project cannot be fully reproducible, help me explain that honestly in the README
+
+I will start uploading Batch 1 now.
+
+Thought for 37s
+Batch 1 received. You uploaded 11 files, not 10. I’ll treat this as Batch 1 and keep the inventory running. No final keep/delete/archive calls yet.
+
+Running Inventory — Batch 1
+File	Type	What it appears to be	Preliminary flag
+barttorvik_23.csv	CSV data	Men’s Bart Torvik/player stat dataset. 4,978 rows, 32 columns. Includes player, team, conference, MPG, PPG, RPG, APG, shooting splits, usage, ORtg/DRtg, BPM, FTr, and rating-style fields.	Likely important raw/processed men’s data. Name is unclear because the file appears to contain year = 2024, so the 23 naming may be misleading.
+barttorvik_24.csv	CSV data	Similar Bart Torvik/player stat dataset. 4,907 rows, 32 columns. Appears to represent the following season with year = 2025.	Likely important raw/processed men’s data. Same naming concern as above.
+conf_map_men.txt	Mapping file	Manual school-to-conference map using team names, e.g. Duke = ACC, Auburn = SEC, Kansas = B12.	Important helper/mapping file, but should probably become a cleaner CSV later. One obvious issue: some entries look incomplete or weird, such as Hampton = and Evansville = Evansville.
+conf_name_map.txt	Mapping file	Manual team ID-to-conference map, with comments showing school names. Looks useful for women’s/team ID data where ESPN/wehoop IDs are involved.	Important mapping file, but also should probably become a clean CSV. Needs validation for blanks/inconsistent names.
+Context-Aware 2K-Style Rating System for NCAA Basketball Final Report.Rmd	R Markdown report	Earlier or alternate final report. Loads prebuilt data files from Data/, explains research question, methods, men’s/women’s pipelines, modeling, conference adjustment, and limitations.	Likely duplicate/older version of GROUP06_WrittenReport.Rmd. Keep for now, but likely archive or delete later depending on differences.
+DataCheck.rmd	R Markdown workflow/check script	Looks like a data-building/checking notebook. It sources hdi_name_matcher.R, pulls/scrapes Bart Torvik data with cbbdata, joins HDI ratings, and builds women’s data using wehoop.	Potentially very important for reproducibility, but currently messy. Has hard-coded local paths to C:/Users/bwdea/..., so it will not run cleanly in a public repo without cleanup.
+GROUP06_PowerPoint.pptx	Slide deck	13-slide project presentation. Covers motivation, data sources, men’s/women’s pipelines, rating construction, final ratings, HDI comparison, team success, staff use cases, limitations, and recommendations.	Good final output artifact. Likely belongs in reports/ or presentation/, possibly renamed.
+GROUP06_WrittenReport.pdf	PDF report	Rendered 7-page written report. Includes intro, data collection, men’s/women’s modeling, conference strength modeling, final ratings, HDI comparison, and limitations.	Good final report artifact. Likely public-facing output.
+GROUP06_WrittenReport.Rmd	R Markdown report	Longer/more complete written report source. Similar structure to the PDF and the other final report Rmd, but appears more developed and likely tied to GROUP06_WrittenReport.pdf.	Likely the main written-report source among the two report Rmds. Needs dependency cleanup.
+HDI_and_Conf.Rmd	R Markdown script/notebook	Focused script for applying conference context to HDI ratings. Reads men/women HDI and conference z-score files from a main/ folder, writes adjusted men/women conference files.	Potentially important helper analysis, but pathing is inconsistent with the report files. Could become scripts/apply_conference_adjustment.R or similar.
+hdi_name_matcher.R	R helper script	Custom function for joining Bart Torvik data to HDI ratings. Handles name normalization, school normalization, nicknames, compound names, and messy player/team matching.	Important reproducibility helper. Probably belongs in R/ or scripts/helpers/. Needs cleaner documentation, but do not delete.
+Obvious Issues Already Showing
+The biggest mess so far is not the idea, it is the repo hygiene:
+
+There are multiple report versions: Context-Aware...Final Report.Rmd, GROUP06_WrittenReport.Rmd, and GROUP06_WrittenReport.pdf.
+
+DataCheck.rmd uses hard-coded local file paths, so it is not portable.
+
+Data file names are not self-explanatory. barttorvik_23.csv appears to contain year = 2024, and barttorvik_24.csv appears to contain year = 2025.
+
+Mapping files are useful but informal. .txt key-value mappings are fine during a project, but a polished repo would be cleaner with team_conference_map_men.csv and team_id_conference_map.csv.
+
+The project uses multiple data sources: HDI ratings, Bart Torvik/cbbdata, ESPN/wehoop, schedules, and manual mapping. That is good portfolio-wise, but it means the README will need a very clear reproducibility note.
+
+The slide deck and written report both clearly explain the project’s core framing: box-score production, team strength, schedule difficulty, and conference strength. Those are likely strong public-facing artifacts. 
+
+ 
+
+
+Preliminary Duplicate / Draft Flags
+Not final decisions yet, but these are the files I’ll compare once all batches are in:
+
+Context-Aware 2K-Style Rating System for NCAA Basketball Final Report.Rmd vs. GROUP06_WrittenReport.Rmd
+
+These look highly overlapping.
+
+My early guess: one is the cleaner/final source, the other becomes archive or excluded.
+
+GROUP06_WrittenReport.pdf vs. GROUP06_WrittenReport.Rmd
+
+These are source + rendered output, not true duplicates.
+
+Public repo can include both if the PDF is a final deliverable.
+
+conf_map_men.txt vs. conf_name_map.txt
+
+Not duplicates. One maps team names; the other maps team IDs.
+
+Both need cleanup/renaming if kept.
+
+Current “Do Not Lose” Candidates
+Still not final, but these seem important enough to protect during cleanup:
+
+hdi_name_matcher.R
+
+DataCheck.rmd
+
+GROUP06_WrittenReport.Rmd
+
+GROUP06_WrittenReport.pdf
+
+GROUP06_PowerPoint.pptx
+
+conf_map_men.txt
+
+conf_name_map.txt
+
+both Bart Torvik CSV files, unless later batches contain cleaner replacements
+
+Send Batch 2 when ready.
+
+
+
+MBB_SOS_Stat3274.R
+File
+
+MBBData and RF.Rmd
+File
+
+Preliminary Player Ranking.Rmd
+File
+
+Progress Report.Rmd
+File
+
+Progress-Report.pdf
+PDF
+
+README.md
+File
+mbb conf strength named
+
+
+men 4099
+
+
+men hdi conf 2025
+
+
+ratings 23
+
+
+ratings 24
+
+
+batch 2
+
+Thought for 12s
+Batch 2 received. You uploaded 12 more files, plus the pipeline diagram image shown above. Running total is now 23 files.
+
+Running Inventory — Batch 2
+File	Type	What it appears to do	Preliminary flag
+mbb_conf_strength_named.csv	CSV data	Men’s conference strength output. 26 rows, 8 columns. Contains conference_id, average team strength, average SOS, conference strength z-score, conference SOS z-score, and a long team list per conference.	Important processed data/output. Likely belongs in data/processed/ or outputs/model_outputs/.
+MBB_SOS_Stat3274.R	R script	Builds men’s D1 team strength and SOS using ESPN schedule data through hoopR, solves a margin-based least-squares team strength model, aggregates to conference strength, then writes mbb_conf_strength_named.csv. 
+
+Important reproducibility script. Strong candidate for scripts/02_mbb_strength_sos.R.
+MBBData and RF.Rmd	R Markdown	Builds men’s Bart Torvik + HDI joined datasets for 2023/2024 seasons, sources hdi_name_matcher.R, trains random forest model, predicts ratings, rescales ratings to 40–99.	Important but messy. Has hard-coded local Windows paths and likely belongs as an archived development notebook unless cleaned into scripts.
+men_4099.csv	CSV data	Final-ish men’s 40–99 statistical ratings before conference adjustment. 4,394 rows, 3 columns: Name, School, Rating.	Important model output. Name should become clearer, maybe mbb_stat_ratings_2025_40_99.csv.
+men_hdi_conf_2025.csv	CSV data	Men’s HDI/stat ratings with conference adjustment fields. 4,394 rows, 11 columns, including Conf, conf_tier, penalty_conf, Rating_add, conf_mult, gap, and Rating_conf.	Important final men’s rating output. Probably one of the key files.
+Pipeline_Diagram.png	PNG image	Visual workflow diagram: men’s pipeline from HDI ratings → player stats → name matching → merged dataset → SOS/conference strength → adjusted rating; women’s pipeline from ESPN box scores → season aggregation → team/conference mapping → normalization → SOS/conference strength → adjusted rating.	Important report asset. Belongs in reports/figures/ or assets/.
+Preliminary Player Ranking.Rmd	R Markdown	Early men’s-only percentile ranking experiment using cbbdata, player stat percentiles, and an initial composite rating idea.	Looks like a development draft. Likely archive later unless it contains unique logic not present elsewhere.
+Progress Report.Rmd	R Markdown	Progress report source. Loads multiple data files, explains research question, data collection, random forest model, women’s role adjustment, conference strength modeling, and limitations.	Historical/report draft. Likely archive once final report is chosen.
+Progress-Report.pdf	PDF report	Rendered 6-page progress report. Includes early methodology, charts, model progress, and limitations. Page 5 shows an HDI vs. stats rating plot with r^2: 0.911; page 4 shows conference strength/SOS visuals. 
+
+Historical milestone, not final portfolio output unless placed in archive.
+ratings_23.csv	CSV data	Men’s joined Bart Torvik + HDI dataset for year = 2024. 4,978 rows, 32 columns. Includes player stats plus HDI Rating.	Important training/processed data, but appears extremely similar to barttorvik_23.csv. Needs duplicate comparison later.
+ratings_24.csv	CSV data	Men’s joined Bart Torvik + HDI dataset for year = 2025. 4,907 rows, 32 columns. Includes player stats plus HDI Rating.	Important training/processed data, but appears extremely similar to barttorvik_24.csv. Needs duplicate comparison later.
+README.md	Markdown	Bare default README: “Final Project for CMDA/STAT 3274 with Dr. Merkes.” 
+
+Replace entirely later. Not useful as-is.
+Updated Running Total
+Batch 1
+barttorvik_23.csv
+
+barttorvik_24.csv
+
+conf_map_men.txt
+
+conf_name_map.txt
+
+Context-Aware 2K-Style Rating System for NCAA Basketball Final Report.Rmd
+
+DataCheck.rmd
+
+GROUP06_PowerPoint.pptx
+
+GROUP06_WrittenReport.pdf
+
+GROUP06_WrittenReport.Rmd
+
+HDI_and_Conf.Rmd
+
+hdi_name_matcher.R
+
+Batch 2
+mbb_conf_strength_named.csv
+
+MBB_SOS_Stat3274.R
+
+MBBData and RF.Rmd
+
+men_4099.csv
+
+men_hdi_conf_2025.csv
+
+Pipeline_Diagram.png
+
+Preliminary Player Ranking.Rmd
+
+Progress Report.Rmd
+
+Progress-Report.pdf
+
+ratings_23.csv
+
+ratings_24.csv
+
+README.md
+
+Obvious Flags After Batch 2
+Strong likely duplicate group
+barttorvik_23.csv / ratings_23.csv and barttorvik_24.csv / ratings_24.csv need direct comparison later. Based on columns and row counts, they look like near-identical or closely related joined men’s datasets. The better final naming would probably be based on season, not file history:
+
+mbb_hdi_torvik_joined_2024.csv
+
+mbb_hdi_torvik_joined_2025.csv
+
+Development notebook clutter
+These look like development notebooks, not final repo-facing source files:
+
+Preliminary Player Ranking.Rmd
+
+Progress Report.Rmd
+
+MBBData and RF.Rmd
+
+possibly DataCheck.rmd
+
+They may contain important code, but a polished repo probably should not leave all of them loose in the root.
+
+Final-output candidates are becoming clearer
+The strongest public-facing artifacts so far are:
+
+GROUP06_WrittenReport.pdf
+
+GROUP06_PowerPoint.pptx
+
+Pipeline_Diagram.png
+
+men_hdi_conf_2025.csv
+
+likely final women’s ratings files when they appear in later batches
+
+Main reproducibility pieces so far
+The current core code trail appears to be:
+
+hdi_name_matcher.R
+
+MBBData and RF.Rmd
+
+MBB_SOS_Stat3274.R
+
+HDI_and_Conf.Rmd
+
+DataCheck.rmd
+
+That is useful, but right now it is scattered. The eventual cleaned repo probably needs those turned into a small set of numbered scripts.
+
+Early Naming Concerns
+Not final decisions, but these names are weak for a portfolio repo:
+
+MBBData and RF.Rmd → unclear and has spaces.
+
+Preliminary Player Ranking.Rmd → screams draft.
+
+Progress Report.Rmd → class artifact, not portfolio source.
+
+men_4099.csv → unclear unless you already know 40–99 scaling.
+
+ratings_23.csv / ratings_24.csv → unclear whether these are raw, model outputs, or HDI inputs.
+
+README.md → placeholder; replace later.
+
+Repo Direction So Far
+The cleaned version should probably frame this as:
+
+A context-adjusted NCAA player rating model that combines player box-score production, team strength, schedule difficulty, and conference strength into 2K-style 40–99 ratings for men’s and women’s college basketball.
+
+The pipeline diagram supports that framing well and should probably be included near the top of the README.
+
+Send Batch 3 when ready.
+
+
+
+Roster Creater.R
+File
+
+to_torvik_names.R
+File
+
+WBBData.Rmd
+File
+rfmodel data
+
+
+wbb conf z 2025
+
+
+wbb team conf zkeys 2025
+
+
+wcbb final ratings
+
+
+wcbb players 2025 with team conf pos
+
+
+women 4099
+
+
+women hdi conf 2025
+
+
+batch 3 
+
+
+conf_name_map(1).txt
+Document
+
+Data Check.Rmd
+File
+
+Data-Check.html
+File
+
+hdi_name_matcher(1).R
+File
+bt2023
+
+
+bt2024
+
+
+HDI Ratings 2023 24
+
+
+HDI Ratings 2024 25
+
+
+model data
+
+
+wcbb players 2025 D1
+
+
+this was our data check 4 weeks beforee it was due, batch 4
+
+
+conf_map_men(1).txt
+Document
+
+conf_name_map(2).txt
+Document
+
+Conference Adjuster.R
+File
+
+hdi_name_matcher(2).R
+File
+
+Ratings Creator.R
+File
+HDI Ratings 2024 25(1)
+
+
+men adjusted
+
+
+men adjusted conf adjusted
+
+
+men conf z scores only
+
+
+men raw
+
+
+men raw conf adjusted
+
+
+wbb conf z 2025(1)
+
+
+wbb team conf zkeys 2025(1)
+
+
+women adjusted
+
+
+women adjusted conf adjusted
+
+
+women conf z scores only
+
+
+women raw
+
+
+women raw conf adjusted
+
+
+heres batch 5.. everything we included for our final submission really.
+
+Thought for a second
+
+my brother said the website might be a bit too rounded, and needs pictures on like the home page, maybe the same ones we're already using on the projects page? 
+
+not generating image... this is for 
+/* ---------- Base ---------- */
+
+body {
+  background-color: #f6f4ef;
+  color: #141414;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.navbar {
+  background-color: #141414;
+  border-bottom: 3px solid #8C1D40;
+}
+
+.navbar-title,
+.navbar-nav .nav-link {
+  color: #f6f4ef !important;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #E87722 !important;
+}
+
+h1, h2, h3 {
+  color: #8C1D40;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  border-bottom: 2px solid #dedad3;
+  padding-bottom: 0.35rem;
+}
+
+a {
+  color: #8C1D40;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #E87722;
+}
+
+/* ---------- Layout ---------- */
+
+.quarto-title-block {
+  display: none;
+}
+
+main.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 4rem 2rem;
+  background: #141414;
+  color: #f6f4ef;
+  border-radius: 28px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  color: #f6f4ef;
+  font-size: 4rem;
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+  font-size: 1.35rem;
+  max-width: 850px;
+  color: #dedad3;
+  line-height: 1.5;
+}
+
+.hero .tagline {
+  color: #E87722;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Cards ---------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #dedad3;
+  border-radius: 22px;
+  padding: 1.35rem;
+  box-shadow: 0 8px 24px rgba(20, 20, 20, 0.07);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #8C1D40;
+}
+
+.project-card p {
+  color: #333;
+}
+
+/* ---------- Images ---------- */
+
+img {
+  border-radius: 18px;
+  box-shadow: 0 8px 26px rgba(20, 20, 20, 0.12);
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+em {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+my website
+
+Thought for a couple of seconds
+Your index page is already solid. I’d make two changes:
+
+Add images to the Featured Work cards.
+
+Add the new NCAA 2K-style ratings project as a featured item.
+
+Slightly tighten the intro so it reads less dense on the homepage.
+
+Here’s a cleaner updated version of your index.qmd. Replace the image paths with whatever your actual filenames are.
+
+title: "Caleb Ramsey"
+::: {.hero}
+
+Caleb Ramsey
+Featured Work
+::: {.project-grid}
+
+::: {.project-card}
+
+Practice Hustle Dashboard
+Built a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, player pages, and team trends.
+
+View project
+:::
+
+::: {.project-card}
+
+Scouting Card & Badge System
+Designed custom basketball badges in Photoshop and built an R pipeline that converts Synergy playtype data into automated player scouting cards.
+
+View project
+:::
+
+::: {.project-card}
+
+Context-Aware NCAA Basketball Ratings
+Built a 2K-style player rating system for NCAA men’s and women’s basketball that adjusts production for team strength, schedule difficulty, and conference context.
+
+View project
+:::
+
+::: {.project-card}
+
+TipOffBall NBA/WNBA Analysis
+Produced 30+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
+
+View project
+:::
+
+::: {.project-card}
+
+Insurance Risk Monte Carlo Simulation
+Built an R simulation framework to model reserve solvency under heavy-tailed claim distributions, estimate risk outcomes, and communicate uncertainty through statistical summaries and visuals.
+
+View project
+:::
+
+:::
+
+Additional Analytics Work
+Beyond my main basketball projects, I’ve worked on applied analytics projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and statistical reporting. These projects use the same core process: cleaning messy data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
+
+About
+My background sits between statistics, sports media, and communication, which has shaped how I think about analytics. I care about the model or method, but I also care about whether the result can be understood, trusted, and used.
+
+A lot of strong analysis gets ignored because it is trapped in a spreadsheet, buried in a notebook, or presented in a way that does not match the audience. I’m interested in closing that gap by turning messy data into something clear, visual, and worth engaging with.
+
+Most of my work is built in R using Quarto, Shiny, R Markdown, ggplot2, tidyverse, and API-based data workflows.
+:::
+
+For your CSS, add this so the project-card images look intentional and not just dropped in:
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  box-shadow: none;
+}
+I’d also change .project-card from border-radius: 22px; to 12px, and .hero from 28px to 14px. That will make the site feel cleaner and less rounded without losing the visual identity.
+
+
+
+Pasted markdown(63).md
+File
+ heres my projects page
+
+Thought for a couple of seconds
+This page is good. It already has the right structure: project title, tools, summary, image, highlights, link. I would not overhaul it. I’d add the NCAA ratings project between Scouting Card & Badge System and TipOffBall NBA/WNBA Analysis, because it fits better with your basketball/modeling identity than putting it lower. Your current page already leads with VT WBB/dashboard work, then scouting cards, then public NBA/WNBA work, so the NCAA ratings project naturally belongs in that basketball analytics cluster. 
+
+
+Add this section:
+
+Context-Aware NCAA Basketball Player Ratings
+Tools: R, randomForest, tidyverse, Bart Torvik data, ESPN/wehoop, hoopR, cbbdata, R Markdown
+
+Built a context-aware player rating system for NCAA men’s and women’s basketball that converts box-score production, team strength, schedule difficulty, and conference context into 2K-style 40–99 ratings. The project was originally developed as a class/group project and later cleaned into a structured portfolio repo with organized scripts, final outputs, reports, and documentation.
+
+The men’s pipeline used Bart Torvik player statistics joined with HDI ratings as a modeling baseline. The women’s pipeline used ESPN box-score data through wehoop, with season-level aggregation, team/conference mapping, and rating adjustments built to make the outputs more comparable across competitive environments.
+
+
+
+Pipeline diagram showing how men’s and women’s player data were cleaned, modeled, adjusted for team and conference context, and converted into final 2K-style ratings.
+
+Highlights
+
+Trained a random forest model to estimate player ratings from box-score and efficiency statistics
+
+Built men’s and women’s pipelines using different data sources and normalization steps
+
+Applied team strength, schedule difficulty, and conference strength adjustments
+
+Produced final men’s and women’s 40–99 player rating tables
+
+Cleaned a messy class project into a professional GitHub repo with clear folders, scripts, outputs, and documentation
+
+View project repository
+
+Two small edits I’d make to the rest:
+
+For TipOffBall NBA/WNBA Analysis, the “30+ NBA analysis projects” line undersells the WNBA part since the header says NBA/WNBA. Change it to:
+
+Produced 30+ NBA and WNBA analysis projects turning basketball data into public-facing statistical stories.
+For the Insurance Risk Monte Carlo Simulation, add an image if you have one. Right now it is the only major featured project without a visual, so it may feel less polished next to the others. A simple simulation plot screenshot is enough.
+
+
+can u regive me what the index page should look like in copy + pastable format
+
+Thought for a couple of seconds
+Here’s a clean copy-paste version for index.qmd. Update the image filenames if yours are different.
+
+title: "Caleb Ramsey"
+::: {.hero}
+
+Caleb Ramsey
+Featured Work
+::: {.project-grid}
+
+::: {.project-card}
+
+
+Practice Hustle Dashboard
+Built a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, player pages, and team trends.
+
+View project
+:::
+
+::: {.project-card}
+
+
+Scouting Card & Badge System
+Designed custom basketball badges in Photoshop and built an R pipeline that converts Synergy playtype data into automated player scouting cards.
+
+View project
+:::
+
+::: {.project-card}
+
+Context-Aware NCAA Basketball Ratings
+Built a 2K-style player rating model for NCAA men’s and women’s basketball that adjusts production for team strength, schedule difficulty, and conference context.
+
+View project
+:::
+
+::: {.project-card}
+
+
+TipOffBall NBA/WNBA Analysis
+Produced 30+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
+
+View project
+:::
+
+::: {.project-card}
+
+Insurance Risk Monte Carlo Simulation
+Built an R simulation framework to model reserve solvency under heavy-tailed claim distributions, estimate risk outcomes, and communicate uncertainty through statistical summaries and visuals.
+
+View project
+:::
+
+:::
+
+Additional Analytics Work
+Beyond my main basketball projects, I’ve worked on applied analytics projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and statistical reporting. These projects use the same core process: cleaning messy data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
+
+About
+My background sits between statistics, sports media, and communication, which has shaped how I think about analytics. I care about the model or method, but I also care about whether the result can be understood, trusted, and used.
+
+A lot of strong analysis gets ignored because it is trapped in a spreadsheet, buried in a notebook, or presented in a way that does not match the audience. I’m interested in closing that gap by turning messy data into something clear, visual, and worth engaging with.
+
+Most of my work is built in R using Quarto, Shiny, R Markdown, ggplot2, tidyverse, and API-based data workflows.
+:::
+
+If you do not have an insurance image yet, either remove this line for now:
+
+![](assets/images/insurance-monte-carlo-example.png)
+or make a screenshot from the PDF/plot and save it under that filename.
+
+
+first part is copyable, then it goes back to text
+
+Use this version. Everything is inside one normal code block.
+
 ---
 title: "Caleb Ramsey"
 ---
@@ -8,7 +825,7 @@ title: "Caleb Ramsey"
 # Caleb Ramsey
 
 <div class="subtitle">
-I’m a Virginia Tech Statistics and Sports Media & Analytics graduate building data tools, visual reports, and reproducible workflows in R. My strongest work sits at the intersection of basketball, analytics, and communication, including team-facing dashboards, scouting card systems, NBA/WNBA analysis, and prototype shot quality modeling.
+Virginia Tech Statistics and Sports Media & Analytics graduate building data tools, visual reports, and reproducible workflows in R. My work sits at the intersection of basketball, analytics, and communication, including team-facing dashboards, scouting systems, public NBA/WNBA analysis, and prototype player evaluation models.
 </div>
 :::
 
@@ -17,6 +834,8 @@ I’m a Virginia Tech Statistics and Sports Media & Analytics graduate building 
 ::: {.project-grid}
 
 ::: {.project-card}
+![](assets/images/practice-dashboard-example.png)
+
 ### Practice Hustle Dashboard
 
 Built a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, player pages, and team trends.
@@ -25,6 +844,8 @@ Built a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball t
 :::
 
 ::: {.project-card}
+![](assets/images/liz-kitley-scout-card-example.png)
+
 ### Scouting Card & Badge System
 
 Designed custom basketball badges in Photoshop and built an R pipeline that converts Synergy playtype data into automated player scouting cards.
@@ -33,7 +854,19 @@ Designed custom basketball badges in Photoshop and built an R pipeline that conv
 :::
 
 ::: {.project-card}
-### TipOffBall NBA/WNBA Analysis
+![](assets/images/ncaa-2k-ratings-pipeline.png)
+
+### Context-Aware NCAA Basketball Ratings
+
+Built a 2K-style player rating model for NCAA men’s and women’s basketball that adjusts production for team strength, schedule difficulty, and conference context.
+
+[View project](projects.qmd#context-aware-ncaa-basketball-player-ratings)
+:::
+
+::: {.project-card}
+![](assets/images/tipoff-knicks-chart-example.jpg)
+
+### TipOffBall NBA Analysis
 
 Produced 30+ public-facing basketball analysis projects using R, NBA.com data, Synergy, Cleaning the Glass, StatMuse, DataBallr, and other data sources.
 
@@ -41,6 +874,8 @@ Produced 30+ public-facing basketball analysis projects using R, NBA.com data, S
 :::
 
 ::: {.project-card}
+![](assets/images/insurance-monte-carlo-example.png)
+
 ### Insurance Risk Monte Carlo Simulation
 
 Built an R simulation framework to model reserve solvency under heavy-tailed claim distributions, estimate risk outcomes, and communicate uncertainty through statistical summaries and visuals.
@@ -56,8 +891,10 @@ Beyond my main basketball projects, I’ve worked on applied analytics projects 
 
 ## About
 
-My background sits between statistics, sports media, and communication, which has shaped how I think about analytics. I care about the model or method, but I also care about whether the result can be understood, trusted, and used.
+My background combines statistics, sports media, and communication, which has shaped how I think about analytics. I care about the model or method, but I also care about whether the result can be understood, trusted, and used by people who do not live in the data every day.
 
 A lot of strong analysis gets ignored because it is trapped in a spreadsheet, buried in a notebook, or presented in a way that does not match the audience. I’m interested in closing that gap by turning messy data into something clear, visual, and worth engaging with.
 
+
 Most of my work is built in R using Quarto, Shiny, R Markdown, ggplot2, tidyverse, and API-based data workflows.
+
