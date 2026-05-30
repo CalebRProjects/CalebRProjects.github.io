@@ -37,7 +37,7 @@ Designed custom basketball badges in Photoshop and built an R pipeline that conv
 :::
 
 ::: {.project-card}
-![](assets/images/ncaa-2k-ratings-pipeline.png)
+![](assets/images/pipeline-diagram.png)
 
 ### Context-Aware NCAA Basketball Ratings
 
