@@ -178,7 +178,7 @@ img {
 
 .project-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 8.5;
   object-fit: cover;
   margin-top: 0;
   margin-bottom: 0.75rem;
