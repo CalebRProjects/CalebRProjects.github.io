@@ -8,7 +8,7 @@ title: "Caleb Ramsey"
 # Caleb Ramsey
 
 <div class="subtitle">
-Virginia Tech Statistics and Sports Media & Analytics graduate building R-based basketball analytics tools, visual reports, and player evaluation workflows. My work focuses on the space between analysis and communication, turning data into something coaches, collaborators, and public audiences can use.
+Virginia Tech Statistics and Sports Media & Analytics graduate building R-based basketball analytics tools, visual reports, and player evaluation workflows. My work focuses on the space between analysis and communication, turning data into something coaches, collaborators, and public audiences can actually use.
 </div>
 :::
 
