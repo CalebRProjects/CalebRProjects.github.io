@@ -110,7 +110,7 @@ main.content {
 
 /* ---------- Cards ---------- */
 
-.project-grid {
+-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.1rem;
@@ -150,6 +150,16 @@ main.content {
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.project-label {
+  color: #E87722;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  margin-top: 0.75rem;
+  margin-bottom: 0.35rem;
 }
 
 /* ---------- Images ---------- */
