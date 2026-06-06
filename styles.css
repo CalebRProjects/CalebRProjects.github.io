@@ -8,13 +8,14 @@ body {
 
 .navbar {
   background-color: #141414;
-  border-bottom: 3px solid #8C1D40;
+  border-bottom: 4px solid #8C1D40;
 }
 
 .navbar-title,
 .navbar-nav .nav-link {
   color: #f6f4ef !important;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 .navbar-nav .nav-link:hover {
@@ -23,23 +24,34 @@ body {
 
 h1, h2, h3 {
   color: #8C1D40;
-  font-weight: 800;
+  font-weight: 850;
 }
 
 h1 {
   font-size: 3rem;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
 }
 
 h2 {
-  margin-top: 2.5rem;
-  border-bottom: 2px solid #dedad3;
-  padding-bottom: 0.35rem;
+  margin-top: 3rem;
+  border-bottom: 3px solid #141414;
+  padding-bottom: 0.4rem;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.55;
 }
 
 a {
   color: #8C1D40;
-  font-weight: 700;
+  font-weight: 800;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 a:hover {
@@ -53,7 +65,7 @@ a:hover {
 }
 
 main.content {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
   padding-top: 2rem;
 }
@@ -61,33 +73,38 @@ main.content {
 /* ---------- Hero ---------- */
 
 .hero {
-  padding: 4rem 2rem;
-  background: #141414;
+  padding: 4rem 2.25rem;
+  background:
+    linear-gradient(135deg, rgba(140, 29, 64, 0.20), transparent 38%),
+    #141414;
   color: #f6f4ef;
-  border-radius: 14px;
-  margin-bottom: 2rem;
+  border-radius: 6px;
+  border: 1px solid #2a2a2a;
+  border-left: 8px solid #8C1D40;
+  margin-bottom: 2.25rem;
 }
 
 .hero h1 {
   color: #f6f4ef;
-  font-size: 4rem;
+  font-size: 4.25rem;
   line-height: 0.95;
   margin-bottom: 1rem;
+  letter-spacing: -0.06em;
 }
 
 .hero .subtitle {
-  font-size: 1.35rem;
-  max-width: 850px;
+  font-size: 1.28rem;
+  max-width: 880px;
   color: #dedad3;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .hero .tagline {
   color: #E87722;
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
+  letter-spacing: 0.10em;
+  font-size: 0.78rem;
   margin-bottom: 1rem;
 }
 
@@ -96,46 +113,101 @@ main.content {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: 1.1rem;
   margin-top: 2rem;
 }
 
 .project-card {
-  background: white;
-  border: 1px solid #dedad3;
-  border-radius: 12px;
-  padding: 1.35rem;
-  box-shadow: 0 4px 14px rgba(20, 20, 20, 0.06);
+  background: #fffdf8;
+  border: 1px solid #cfc8bd;
+  border-top: 5px solid #8C1D40;
+  border-radius: 6px;
+  padding: 1.1rem;
+  box-shadow: none;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: #8C1D40;
 }
 
 .project-card h3 {
-  margin-top: 0;
+  margin-top: 0.9rem;
+  margin-bottom: 0.55rem;
   color: #8C1D40;
+  font-size: 1.35rem;
 }
 
 .project-card p {
   color: #333;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* ---------- Images ---------- */
 
 img {
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(20, 20, 20, 0.10);
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid #cfc8bd;
   margin-top: 1rem;
   margin-bottom: 0.35rem;
 }
 
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  border-radius: 3px;
+  border: 1px solid #cfc8bd;
+}
+
 em {
   color: #555;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+}
+
+/* ---------- Project Pages ---------- */
+
+main.content > p,
+main.content > ul,
+main.content > ol {
+  max-width: 850px;
+}
+
+strong {
+  font-weight: 850;
 }
 
 /* ---------- Mobile ---------- */
 
 @media (max-width: 800px) {
+  main.content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1.35rem;
+    border-left-width: 6px;
+  }
+
   .hero h1 {
-    font-size: 2.75rem;
+    font-size: 2.85rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.08rem;
   }
 
   .project-grid {
