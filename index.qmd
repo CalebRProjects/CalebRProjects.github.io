@@ -19,6 +19,8 @@ Virginia Tech Statistics and Sports Media & Analytics graduate building R-based 
 ::: {.project-card}
 ![](assets/images/practice-dashboard-example.png)
 
+<div class="project-label">Team dashboard</div>
+
 ### Practice Hustle Dashboard
 
 Built a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, player pages, and team trends.
@@ -28,6 +30,8 @@ Built a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball t
 
 ::: {.project-card}
 ![](assets/images/liz-kitley-scout-card-example.png)
+
+<div class="project-label">Scouting workflow</div>
 
 ### Scouting Card & Badge System
 
@@ -39,6 +43,8 @@ Designed custom basketball badges in Photoshop and built an R pipeline that conv
 ::: {.project-card}
 ![](assets/images/pipeline-diagram.png)
 
+<div class="project-label">Player evaluation model</div>
+
 ### Context-Aware NCAA Basketball Ratings
 
 Built a 2K-style player rating model for NCAA men’s and women’s basketball that adjusts production for team strength, schedule difficulty, and conference context.
@@ -48,6 +54,8 @@ Built a 2K-style player rating model for NCAA men’s and women’s basketball t
 
 ::: {.project-card}
 ![](assets/images/tipoff-knicks-chart-example.jpg)
+
+<div class="project-label">Public NBA analysis</div>
 
 ### TipOffBall NBA Analysis
 
