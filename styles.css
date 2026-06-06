@@ -24,7 +24,11 @@ body {
 
 h1, h2, h3 {
   color: #8C1D40;
-  font-weight: 850;
+  font-weight: 800;
+}
+
+strong {
+  font-weight: 800;
 }
 
 h1 {
@@ -193,10 +197,6 @@ main.content > p,
 main.content > ul,
 main.content > ol {
   max-width: 850px;
-}
-
-strong {
-  font-weight: 850;
 }
 
 /* ---------- Mobile ---------- */
