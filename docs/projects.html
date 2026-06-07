@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="practice-hustle-dashboard" class="level2">
 <h2 class="anchored" data-anchor-id="practice-hustle-dashboard">Practice Hustle Dashboard</h2>
 <p><strong>Tools:</strong> R, Quarto, Google Sheets API, Hudl Sportscode, OneDrive, ggplot2</p>
-<p>Built a locally hosted web dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, trends, and player pages. The project addressed a workflow gap where hustle metrics were tracked every practice through Hudl Sportscode but stored across individual Google Sheets tabs without a centralized reporting system.</p>
+<p>Built a local Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, trends, and player pages. The project addressed a workflow gap where hustle metrics were tracked every practice through Hudl Sportscode but stored across individual Google Sheets tabs without a centralized reporting system.</p>
 <p><img src="assets/images/practice-dashboard-example.png" class="img-fluid"></p>
 <p><em>Dashboard home page example. Player identifiers are anonymized in public materials to preserve team confidentiality.</em></p>
 <p>The site ingests practice data from Google Sheets, standardizes metrics such as assists, rebounds, deflections, steals, charges, loose balls, and turnovers, then renders a full Quarto website shared through OneDrive to protect proprietary team data.</p>
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="assets/images/pipeline-diagram.png" class="img-fluid"></p>
 <p><em>Pipeline diagram showing how men’s and women’s player data were cleaned, modeled, adjusted for team and conference context, and converted into final 2K-style ratings.</em></p>
 <p><img src="assets/images/ovr-rating-example.png" class="img-fluid"></p>
-<p><em>Example rating comparison showing how the model moved from initial production-based ratings to final conference-adjusted ratings. Initial ratings were driven primarily by player statistical output, while final ratings incorporated team strength, schedule difficulty, and conference context.</em></p>
+<p><em>Example rating comparison showing how the model moved from initial production-based ratings to final conference-adjusted ratings. Initial ratings were based primarily on player production and efficiency. Final ratings incorporated schedule and conference context to better compare high-major stars with high-output players from weaker conferences.</em></p>
 <p><strong>Highlights</strong></p>
 <ul>
 <li>Trained a random forest model to estimate player ratings from box-score and efficiency statistics</li>
@@ -211,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 <p><em>Example cover graphic from the same project, showing how the analysis was packaged into a social-first basketball story.</em></p>
 <p><strong>Highlights</strong></p>
 <ul>
-<li>Built R workflows for NBA player and team analysis using public and proprietary basketball data sources</li>
+<li>Built R workflows for NBA player and team analysis using public and subscription-based basketball data sources</li>
 <li>Created data-backed stories on team performance, player development, playoff adjustments, trade fits, and player-specific trends</li>
 <li>Produced written reports and visual analysis that generated 250,000+ X impressions and 100,000+ Instagram engagements</li>
 <li>Collaborated with TipOffBall to turn statistical findings into social-first basketball content</li>
@@ -223,9 +223,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="additional-analytics-projects">Additional Analytics Projects</h2>
 <section id="shot-quality-pipeline" class="level3">
 <h3 class="anchored" data-anchor-id="shot-quality-pipeline">Shot Quality Pipeline</h3>
-<p>Early-stage proof-of-concept exploring how NBA Stats API play-by-play and shot chart data can be used to estimate contextual shot value beyond makes and misses. The current version is a rough meeting report rather than a finished model, but it shows the basic automation shell of pulling NBA games, extracting shot events, assigning proxy shot quality buckets, summarizing game-to-game trends, and adding a rough possession value layer.</p>
+<p>Built an early-stage NBA shot quality and possession value workflow that pulls public NBA data, extracts player shot events, assigns proxy shot quality buckets, and summarizes game-to-game trends. The project started as a rough meeting proof-of-concept and has since expanded toward a more reusable player-level workflow for evaluating shot difficulty, scoring value, and possession impact.</p>
 <p><strong>Tools:</strong> R, NBA Stats API, play-by-play data, shot chart data, tidyverse, R Markdown</p>
-<p><a href="assets/shot-quality-rough-concept-report.pdf">View proof-of-concept PDF</a></p>
+<p><a href="https://github.com/CalebRProjects/NBA-Shot-Quality-RShiny">View project repository</a></p>
 </section>
 <section id="insurance-risk-monte-carlo-simulation" class="level3">
 <h3 class="anchored" data-anchor-id="insurance-risk-monte-carlo-simulation">Insurance Risk Monte Carlo Simulation</h3>
