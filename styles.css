@@ -199,6 +199,25 @@ main.content > ol {
   max-width: 850px;
 }
 
+/* ---------- Project Page Sections ---------- */
+
+main.content h2 {
+  margin-top: 3.5rem;
+}
+
+main.content h2:first-of-type {
+  margin-top: 1rem;
+}
+
+main.content h3 {
+  margin-top: 2rem;
+}
+
+main.content img + em {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
 /* ---------- Mobile ---------- */
 
 @media (max-width: 800px) {
