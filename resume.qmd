@@ -8,8 +8,8 @@ title: "Resume"
 
 ## Technical Skills
 
-**Languages & Tools:** R, Python, SQL, Tableau, Git/GitHub, Excel  
+**Languages & Tools:** R, Python, SQL, Tableau, Excel, Git/GitHub
 
-**R Ecosystem:** tidyverse, ggplot2, Shiny, Quarto, R Markdown, plotly  
+**R & Reporting:** tidyverse, ggplot2, Shiny, Quarto, R Markdown, plotly
 
-**Analytics:** Statistical modeling, dashboard development, API retrieval, web scraping, reproducible workflows, data visualization
+**Analytics:** statistical modeling, dashboard development, API retrieval, web scraping, reproducible workflows
