@@ -6,7 +6,7 @@ title: "Projects"
 
 **Tools:** R, Quarto, Google Sheets API, Hudl Sportscode, OneDrive, ggplot2
 
-Built a locally hosted web dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, trends, and player pages. The project addressed a workflow gap where hustle metrics were tracked every practice through Hudl Sportscode but stored across individual Google Sheets tabs without a centralized reporting system.
+Built a local Quarto dashboard for Virginia Tech Women’s Basketball to turn daily practice tracking data into coach-facing summaries, leaderboards, trends, and player pages. The project addressed a workflow gap where hustle metrics were tracked every practice through Hudl Sportscode but stored across individual Google Sheets tabs without a centralized reporting system.
 
 ![](assets/images/practice-dashboard-example.png)
 
@@ -60,7 +60,7 @@ Initial ratings were based primarily on player production and efficiency. Final 
 
 ![](assets/images/ovr-rating-example.png)
 
-*Example rating comparison showing how the model moved from initial production-based ratings to final conference-adjusted ratings. Initial ratings were driven primarily by player statistical output, while final ratings incorporated team strength, schedule difficulty, and conference context.*
+*Example rating comparison showing how the model moved from initial production-based ratings to final conference-adjusted ratings. Initial ratings were based primarily on player production and efficiency. Final ratings incorporated schedule and conference context to better compare high-major stars with high-output players from weaker conferences.*
 
 **Highlights**
 
@@ -90,7 +90,7 @@ Produced 30+ NBA analysis projects turning basketball data into public-facing st
 
 **Highlights**
 
-- Built R workflows for NBA player and team analysis using public and proprietary basketball data sources
+- Built R workflows for NBA player and team analysis using public and subscription-based basketball data sources
 - Created data-backed stories on team performance, player development, playoff adjustments, trade fits, and player-specific trends
 - Produced written reports and visual analysis that generated 250,000+ X impressions and 100,000+ Instagram engagements
 - Collaborated with TipOffBall to turn statistical findings into social-first basketball content
@@ -103,11 +103,11 @@ Produced 30+ NBA analysis projects turning basketball data into public-facing st
 
 ### Shot Quality Pipeline
 
-Early-stage proof-of-concept exploring how NBA Stats API play-by-play and shot chart data can be used to estimate contextual shot value beyond makes and misses. The current version is a rough meeting report rather than a finished model, but it shows the basic automation shell of pulling NBA games, extracting shot events, assigning proxy shot quality buckets, summarizing game-to-game trends, and adding a rough possession value layer.
+Built an early-stage NBA shot quality and possession value workflow that pulls public NBA data, extracts player shot events, assigns proxy shot quality buckets, and summarizes game-to-game trends. The project started as a rough meeting proof-of-concept and has since expanded toward a more reusable player-level workflow for evaluating shot difficulty, scoring value, and possession impact.
 
 **Tools:** R, NBA Stats API, play-by-play data, shot chart data, tidyverse, R Markdown
 
-[View proof-of-concept PDF](assets/shot-quality-rough-concept-report.pdf)
+[View project repository](https://github.com/CalebRProjects/NBA-Shot-Quality-RShiny)
 
 ### Insurance Risk Monte Carlo Simulation
 
