@@ -29,6 +29,18 @@ Built a locally hosted Quarto dashboard for Virginia Tech Women’s Basketball t
 :::
 
 ::: {.project-card}
+![](assets/images/nba-playoff-dashboard-example.png)
+
+<div class="project-label">BI dashboard</div>
+
+### NBA Playoff Audience Intelligence
+
+Built a Tableau BI dashboard using public YouTube data to analyze content performance, audience sentiment, and digital monitoring signals across 16 NBA playoff team channels.
+
+[View project](projects.qmd#nba-playoff-digital-audience-intelligence-dashboard)
+:::
+
+::: {.project-card}
 ![](assets/images/liz-kitley-scout-card-example.png)
 
 <div class="project-label">Scouting workflow</div>
@@ -68,7 +80,7 @@ Produced 30+ public-facing NBA analysis projects using R, NBA.com data, Synergy,
 
 ## Additional Analytics Work
 
-Beyond my main basketball projects, I’ve worked on applied analytics projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and prototype shot quality workflows. These projects use the same core process: cleaning messy data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
+Beyond my main basketball and BI projects, I’ve worked on applied analytics projects involving Monte Carlo simulation, survey analysis, employee attrition modeling, and prototype shot quality workflows. These projects use the same core process: cleaning messy data, building reproducible workflows, modeling uncertainty, and communicating results clearly.
 
 [View additional projects](projects.qmd#additional-analytics-projects)
 

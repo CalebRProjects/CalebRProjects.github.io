@@ -23,6 +23,33 @@ The site ingests practice data from Google Sheets, standardizes metrics such as 
 
 ---
 
+## NBA Playoff Digital Audience Intelligence Dashboard
+
+**Tools:** R, YouTube Data API, SQL, SQLite, Tableau Public, sentiment analysis
+
+Built a public-facing BI dashboard analyzing YouTube engagement and comment sentiment across the 16 NBA playoff team channels during the 2026 playoff window. The project translates public video and comment data into stakeholder-facing views for content performance, audience response, and digital monitoring.
+
+The workflow uses R to collect video metadata, video statistics, and sampled public comments through the YouTube Data API. Comment text is converted into sentiment fields, video-level KPIs are engineered, SQL queries are used to summarize performance, and Tableau dashboards present the final insights.
+
+![](assets/images/nba-playoff-dashboard-example.png)
+
+*Executive overview from the Tableau dashboard, showing playoff YouTube reach, engagement efficiency, sentiment, and publishing trends across 16 NBA team channels.*
+
+**Highlights**
+
+* Collected and cleaned public YouTube video, engagement, and comment data across 16 NBA playoff team channels
+* Built video-level KPIs including views, total engagements, weighted engagement rate, comments per 1K views, and sentiment mix
+* Used lexicon-based sentiment analysis to classify sampled comments as positive, neutral, or negative
+* Created monitoring priority logic to flag videos with high engagement, elevated negative sentiment, or both
+* Built Tableau dashboards for executive overview, content strategy, and digital monitoring use cases
+* Published an interactive Tableau Public dashboard and documented the workflow in a professional GitHub repo
+
+[View Tableau dashboard](https://public.tableau.com/app/profile/caleb.ramsey/viz/NBAPlayoffDigitalAudienceIntelligenceDashboard/DigitalMonitoringSentimentRisk)
+
+[View project repository](https://github.com/CalebRProjects/NBA-Digital-Audience-Intelligence-Dashboard)
+
+---
+
 ## Scouting Card & Badge System
 
 **Tools:** R, Photoshop, Synergy playtype data, ggplot2, image rendering, percentile grading
